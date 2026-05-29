@@ -2,7 +2,7 @@
 
 Automated Docker builds of Moon-Userbot with support for arm64 and including more dependencies.
 
-This image get's build from source daily.
+This image get's build from the latest release daily.
 
 > [!IMPORTANT]  
 > The version of this repository you are seeing is likely a mirror.
@@ -17,15 +17,15 @@ The official [qbtaumai/moonuserbot](https://hub.docker.com/r/qbtaumai/moonuserbo
 
 The Docker image is available on these registries.
 
-- [git.watn3y.de](https://git.watn3y.de/watn3y/-/packages/container/Moon-Userbot/versions)
-- [Docker Hub](https://hub.docker.com/r/watn3y/Moon-Userbot)
+- [git.watn3y.de](https://git.watn3y.de/watn3y/-/packages/container/moonuserbot/versions)
+- [Docker Hub](https://hub.docker.com/r/watn3y/moonuserbot)
 
 Example compose file:
 
 ```yaml
 services:
   Moon-Userbot:
-    image: watn3y/Moon-Userbot:latest
+    image: watn3y/moonuserbot:latest
     container_name: Moon-Userbot
     restart: unless-stopped
     volumes:
