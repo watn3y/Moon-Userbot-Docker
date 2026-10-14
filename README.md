@@ -44,3 +44,18 @@ services:
       - GEMINI_KEY=
       - COHERE_KEY=
 ```
+
+## Getting your Telegram credentials
+
+### API_ID and API_HASH
+
+Get your API_ID and API_HASH from [my.telegram.org](https://my.telegram.org).
+Feel free to follow [this](https://core.telegram.org/api/obtaining_api_id) official guide.
+
+### STRINGSESSION
+
+You can use this Docker Image to generate your string session.
+
+```bash
+docker run -it --rm watn3y/moonuserbot:latest string_gen.py
+```
