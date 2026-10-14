@@ -24,4 +24,7 @@ RUN curl -fsSL https://deno.land/install.sh | bash -s -- -y
 ENV PATH="/root/.deno/bin:$PATH"
 RUN pip install -U yt-dlp-ejs curl_cffi yt-dlp
 
+# Directory for the sqlite DB (DATABASE_NAME=data/db.sqlite3); mount a volume here to persist it
+RUN mkdir -p /app/data
+
 CMD ["python", "main.py"]
