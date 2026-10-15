@@ -7,7 +7,17 @@ RUN TAG=$(git ls-remote --tags --refs --sort=-v:refname https://github.com/The-M
 
 FROM python:3.11-slim
 
-# Make a failure anywhere in a pipe fail the RUN step
+
+LABEL org.opencontainers.image.title="Moon-Userbot" \
+    org.opencontainers.image.description="Automated Docker builds of Moon-Userbot with support for arm64 and including more dependencies." \
+    org.opencontainers.image.authors="watn3y <me@watn3y.de>" \
+    org.opencontainers.image.vendor="watn3y.de" \
+    org.opencontainers.image.documentation="https://git.watn3y.de/watn3y/Moon-Userbot-Docker/src/branch/master/README.md" \
+    org.opencontainers.image.url="https://git.watn3y.de/watn3y/Moon-Userbot-Docker" \
+    org.opencontainers.image.source="https://git.watn3y.de/watn3y/Moon-Userbot-Docker" \
+    org.opencontainers.image.licenses="GPL-3.0-or-later" \
+    org.opencontainers.image.base.name="docker.io/library/python:3.11-slim" 
+
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 WORKDIR /app
@@ -22,9 +32,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 RUN curl -fsSL https://deno.land/install.sh | bash -s -- -y
 ENV PATH="/root/.deno/bin:$PATH"
-RUN pip install -U yt-dlp-ejs curl_cffi yt-dlp
+RUN pip install -U --no-cache-dir yt-dlp-ejs curl_cffi yt-dlp
 
-# Directory for the sqlite DB (DATABASE_NAME=data/db.sqlite3); mount a volume here to persist it
+
 RUN mkdir -p /app/data
 
 ENTRYPOINT [ "python" ]
