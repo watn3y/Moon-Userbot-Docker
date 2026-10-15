@@ -2,7 +2,7 @@
 
 Automated Docker builds of Moon-Userbot with support for arm64 and including more dependencies.
 
-This image get's build from the latest release daily.
+This image gets built from the latest release daily.
 
 > [!IMPORTANT]  
 > The version of this repository you are seeing is likely a mirror.
@@ -59,3 +59,10 @@ You can use this Docker Image to generate your string session.
 ```bash
 docker run -it --rm watn3y/moonuserbot:latest string_gen.py
 ```
+
+## Credits and support
+
+This is an unofficial image. All credit for the bot itself goes to the [Moon-Userbot](https://github.com/The-MoonTg-project/Moon-Userbot) project. This repository only packages it into a Docker image.
+
+- Problems with the image (missing dependencies, arm64 builds, the compose example): open an issue on [git.watn3y.de](https://git.watn3y.de/watn3y/Moon-Userbot-Docker/issues). Please don't bother the Moon-Userbot developers with these.
+- Questions about the bot itself (commands, modules, configuration): see the [Moon-Userbot documentation](https://the-moontg-project.github.io/), ask in their [support chat](https://t.me/moonub_chat) or open an issue on [GitHub](https://github.com/The-MoonTg-project/Moon-Userbot/issues).
