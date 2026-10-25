@@ -5,7 +5,7 @@ WORKDIR /app
 RUN TAG=$(git ls-remote --tags --refs --sort=-v:refname https://github.com/The-MoonTg-project/Moon-Userbot.git | head -n1 | sed 's|.*refs/tags/||') \
     && git clone --depth 1 --branch "$TAG" https://github.com/The-MoonTg-project/Moon-Userbot.git .
 
-FROM python:3.11-slim
+FROM python:3.15-slim
 
 
 LABEL org.opencontainers.image.title="Moon-Userbot" \
