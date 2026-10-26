@@ -20,7 +20,7 @@ The Docker image is available on these registries.
 - [git.watn3y.de](https://git.watn3y.de/watn3y/-/packages/container/moonuserbot/versions)
 - [Docker Hub](https://hub.docker.com/r/watn3y/moonuserbot)
 
-### Example compose file:
+### Example compose file
 
 ```yaml
 services:
